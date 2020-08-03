@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jenkins Helper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" type="text/css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: 'Oxygen', sans-serif;
+                margin: 0;
+                border: 0;
+                padding: 20px;
+                padding-top: 200px;
+                width: 100%;
+            }
+            .main {
+                max-width: 100%;
+                width: 800px;
+                margin: auto;
+                display: block;
+            }
+            h1 {
+                font-size: 48px;
+                font-weight: bold;
+            }
+            input {
+                font-size: 18px;
+                font-family: 'Inconsolata', monospace;
+                font-weight: bold;
+                border: none;
+                border-bottom: 2px solid #BBB;
+                padding: 4px 0px;
+                line-height: 24px;
+                width: 100%;
+                transition: ease all .3s;
+                color: #444;
+                margin-bottom: 20px;
+            }
+            input:hover {
+                border-color: #999;
+            }
+            input:focus {
+                border: none;
+                border-bottom: 2px solid #e3e3e3;
+                outline: none;
+                border-color: #333;
+            }
+            ::placeholder {
+                opacity: .3;
+            }
+            button {
+                border-radius: 500px;
+                border: none;
+                background-color: #333;
+                transition: ease all .1s;
+                color: white;
+                padding: 16px 24px;
+            }
+            button:hover {
+                background-color: #444;
+            }
+            button:focus {
+                outline: none;
+            }
+            button:active {
+                outline: none;
+                background-color: black;
+            }
+            #maint-btn {
+                opacity: .5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Input job URL</h1>
+            <input type="text" id="url-input" placeholder="https://ci02.eng.appianci.net/view/ngdavid5_branch-name_ae/job/...">
+            <button id="master-btn">view master &rarr;</button>
+            <button id="maint-btn">view 20.3-maint &rarr;</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
